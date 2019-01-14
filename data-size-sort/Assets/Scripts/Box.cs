@@ -5,7 +5,8 @@ using UnityEngine;
 public class Box : MonoBehaviour
 {
     float distance = 10;
-    bool collided = false;
+    bool collided = false;          //Used to tell if we should snap to the box or not
+    public GameObject startPoint;   //We need this here so we can set a starting location inside unity (Aka a blank Box)
 
     private Collider2D box;
     private Collider2D location;
@@ -15,14 +16,14 @@ public class Box : MonoBehaviour
 
     private void Start()
     {
-        obj = GameObject.FindWithTag("Box");
+
     }
 
     private void OnTriggerStay2D(Collider2D collider)
     {
         //Sets location of object to location of object it has collided with
         Vector3 locationVector = collider.gameObject.transform.position;
-        obj.transform.position = locationVector;
+        transform.position = locationVector;
         collided = true;
     }
 
@@ -43,10 +44,8 @@ public class Box : MonoBehaviour
     private void OnMouseUp()
     {
         if (collided == false)
-        {
-            Debug.Log("Drag ended!");
-            startObj = GameObject.FindWithTag("Start");
-            Vector3 startPos = startObj.transform.position;
+        {   
+            Vector3 startPos = startPoint.transform.position;
             transform.position = startPos;
         }
     }
