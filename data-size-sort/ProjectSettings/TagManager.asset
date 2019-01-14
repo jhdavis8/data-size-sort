@@ -7,6 +7,7 @@ TagManager:
   - Location
   - Box
   - Start
+  - Button
   layers:
   - Default
   - TransparentFX
