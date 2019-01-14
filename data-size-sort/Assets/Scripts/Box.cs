@@ -20,6 +20,7 @@ public class Box : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collider)
     {
+        //Sets location of object to location of object it has collided with
         Vector3 locationVector = collider.gameObject.transform.position;
         obj.transform.position = locationVector;
         collided = true;
@@ -33,6 +34,7 @@ public class Box : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        //Code sets object's position to match the location of the mouse
         Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y,distance);
         Vector3 objPositoin = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = objPositoin;
