@@ -8,20 +8,11 @@ public class Box : MonoBehaviour
 
     private Collider2D box;
     private Collider2D location;
-    private float x;
-    private float y;
-    private float xSize;
-    private float ySize;
 
 
     private void Start()
     {
         GameObject box = GameObject.FindWithTag("Box");
-        x = box.transform.position.x;
-        y = box.transform.position.y;
-        xSize = box.GetComponent<Collider2D>().bounds.size.x;
-        ySize = box.GetComponent<Collider2D>().bounds.size.y;
-
     }
 
     private void OnTriggerStay2D(Collider2D collider)
