@@ -9,15 +9,16 @@ public class Box : MonoBehaviour
     private Collider2D box;
     private Collider2D location;
 
-
+    private GameObject obj;
     private void Start()
     {
-        GameObject box = GameObject.FindWithTag("Box");
+        obj = GameObject.FindWithTag("Box");
     }
 
     private void OnTriggerStay2D(Collider2D collider)
     {
-        Debug.Log("Collision");
+        Vector3 locationVector = collider.gameObject.transform.position;
+        obj.transform.position = locationVector;
     }
 
 
