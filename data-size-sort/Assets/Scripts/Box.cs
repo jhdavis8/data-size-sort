@@ -5,7 +5,7 @@ using UnityEngine;
 public class Box : MonoBehaviour
 {
     float distance = 10;
-    bool collided = false;          //Used to tell if we should snap to the box or not
+    public bool collided = false;          //Used to tell if we should snap to the box or not
     public GameObject startPoint;   //We need this here so we can set a starting location inside unity (Aka a blank Box)
 
     private Collider2D box;
@@ -24,7 +24,10 @@ public class Box : MonoBehaviour
         //Sets location of object to location of object it has collided with
         Vector3 locationVector = collider.gameObject.transform.position;
         transform.position = locationVector;
-        collided = true;
+        if (collider.tag != ("Start"))
+        {
+            collided = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collider)
