@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EndPoint : MonoBehaviour
 {
+    private Box box;
     private bool full;
 
     private void Start()
@@ -13,7 +14,11 @@ public class EndPoint : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collider)
     {
-        full = true;
+        box = collider.GetComponent<Box>();
+        if (box != null && box.IsDropped())
+        {
+            full = true;
+        }
     }
 
     public bool isFull()

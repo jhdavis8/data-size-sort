@@ -15,6 +15,7 @@ public class Box : MonoBehaviour
     private GameObject startObj;
 
     private string collidingTag;
+    private bool dropped = false; //Used to tell if the box has been dropped by the user into a valid space
 
     private void Start()
     {
@@ -64,8 +65,12 @@ public class Box : MonoBehaviour
             {
                 Debug.Log("Wrong");
             }
+            dropped = true;
         }
     }
 
-
+    public bool IsDropped()
+    {
+        return dropped;
+    }
 }
