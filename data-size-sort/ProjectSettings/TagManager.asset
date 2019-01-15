@@ -7,6 +7,15 @@ TagManager:
   - Location
   - Box
   - Start
+  - Button
+  - Bit
+  - Byte
+  - KB
+  - MB
+  - GB
+  - TB
+  - PT
+  - EB
   layers:
   - Default
   - TransparentFX
