@@ -14,8 +14,8 @@ TagManager:
   - MB
   - GB
   - TB
-  - PT
   - EB
+  - PB
   layers:
   - Default
   - TransparentFX
