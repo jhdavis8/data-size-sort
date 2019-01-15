@@ -14,9 +14,11 @@ public class Box : MonoBehaviour
     private GameObject obj;
     private GameObject startObj;
 
+    private string collidingTag;
+
     private void Start()
     {
-
+        collidingTag = "";
     }
 
     private void OnTriggerStay2D(Collider2D collider)
@@ -27,6 +29,7 @@ public class Box : MonoBehaviour
         if (collider.tag != ("Start"))
         {
             collided = true;
+            collidingTag = collider.tag;
         }
     }
 
@@ -50,6 +53,17 @@ public class Box : MonoBehaviour
         {   
             Vector3 startPos = startPoint.transform.position;
             transform.position = startPos;
+        }
+        else
+        {
+            if (collidingTag == this.tag)
+            {
+                Debug.Log("Correct");
+            }
+            else
+            {
+                Debug.Log("Wrong");
+            }
         }
     }
 
