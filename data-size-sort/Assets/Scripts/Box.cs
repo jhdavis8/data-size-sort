@@ -14,9 +14,11 @@ public class Box : MonoBehaviour
     private GameObject obj;
     private GameObject startObj;
 
+    private string collidingTag;
+
     private void Start()
     {
-
+        collidingTag = "";
     }
 
     private void OnTriggerStay2D(Collider2D collider)
@@ -25,6 +27,7 @@ public class Box : MonoBehaviour
         Vector3 locationVector = collider.gameObject.transform.position;
         transform.position = locationVector;
         collided = true;
+        collidingTag = collider.tag;
     }
 
     private void OnTriggerExit2D(Collider2D collider)
@@ -44,10 +47,22 @@ public class Box : MonoBehaviour
     private void OnMouseUp()
     {
         if (collided == false)
-        {   
+        {
             Vector3 startPos = startPoint.transform.position;
             transform.position = startPos;
         }
+        else
+        {
+            if (collidingTag == this.tag)
+            {
+                Debug.Log(this.tag);
+            }
+            else
+            {
+                Debug.Log("Wrong location");
+            }
+        }
+
     }
 
 
