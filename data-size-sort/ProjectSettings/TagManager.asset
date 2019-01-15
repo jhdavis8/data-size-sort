@@ -8,6 +8,9 @@ TagManager:
   - Box
   - Start
   - Button
+  - Byte
+  - Bit
+  - KB
   layers:
   - Default
   - TransparentFX
