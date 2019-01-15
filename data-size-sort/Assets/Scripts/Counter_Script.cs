@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Counter_Script : MonoBehaviour
 {
-    public Box endpoint1;
+    //Checks each individual endpoint box
+    public Box endpoint1;   
     public Box endpoint2;
     public Box endpoint3;
     // Start is called before the first frame update
