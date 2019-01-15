@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Counter_Script : MonoBehaviour
 {
@@ -19,7 +23,8 @@ public class Counter_Script : MonoBehaviour
     {
         if(endpoint1.collided == true && endpoint2.collided == true && endpoint3.collided == true)
         {
-            Debug.Log("GameOVer");
+            // Level 2 is loaded once Level 1 is completed
+            SceneManager.LoadScene("Level2");
         }
     }
 }
