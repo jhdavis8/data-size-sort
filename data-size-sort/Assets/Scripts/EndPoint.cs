@@ -28,7 +28,6 @@ public class EndPoint : MonoBehaviour
         {
             full = true;
             collidedName = collider.tag;
-            Debug.Log(collider.tag);
         }
     }
 
