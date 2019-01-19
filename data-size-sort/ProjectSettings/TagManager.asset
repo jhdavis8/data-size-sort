@@ -17,6 +17,7 @@ TagManager:
   - EB
   - PB
   - ZB
+  - Reset
   layers:
   - Default
   - TransparentFX
