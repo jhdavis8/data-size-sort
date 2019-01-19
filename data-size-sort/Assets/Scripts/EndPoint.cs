@@ -9,9 +9,11 @@ public class EndPoint : MonoBehaviour
 {
     private Box box;
     private bool full;
+    private string collidedName;
 
     private void Start()
     {
+        collidedName = "";
         full = false;
     }
 
@@ -25,6 +27,8 @@ public class EndPoint : MonoBehaviour
         if (box != null && box.IsDropped())
         {
             full = true;
+            collidedName = collider.tag;
+            Debug.Log(collider.tag);
         }
     }
 
@@ -34,5 +38,11 @@ public class EndPoint : MonoBehaviour
     public bool isFull()
     {
         return full;
+    }
+
+
+    public string collidedTag()
+    {
+        return collidedName;
     }
 }
