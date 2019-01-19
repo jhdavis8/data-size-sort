@@ -3770,7 +3770,7 @@ PrefabInstance:
     - target: {fileID: 1115967981626826471, guid: 5a7082d47af176e44bb6005ee8260713,
         type: 3}
       propertyPath: m_TagString
-      value: EB
+      value: ZB
       objectReference: {fileID: 0}
     - target: {fileID: 1115967981626826467, guid: 5a7082d47af176e44bb6005ee8260713,
         type: 3}
@@ -5417,7 +5417,7 @@ PrefabInstance:
     - target: {fileID: 1115967981626826471, guid: 5a7082d47af176e44bb6005ee8260713,
         type: 3}
       propertyPath: m_TagString
-      value: EB
+      value: ZB
       objectReference: {fileID: 0}
     - target: {fileID: 1115967981626826467, guid: 5a7082d47af176e44bb6005ee8260713,
         type: 3}
