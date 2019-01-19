@@ -11,7 +11,8 @@ public class GameController : MonoBehaviour
     public EndPoint[] endPoints;
 
     /*
-    * Called once per frame. This checks if all EndPoints in the scene are filled.
+    * Called once per frame. This checks if all EndPoints in the scene are filled and have the correct 
+    * box in it.
     */
     void Update()
     {

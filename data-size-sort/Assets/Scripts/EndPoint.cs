@@ -40,7 +40,9 @@ public class EndPoint : MonoBehaviour
         return full;
     }
 
-
+    /*
+     * Returns the name of the object that has collided with the endpoint 
+     */
     public string collidedTag()
     {
         return collidedName;
