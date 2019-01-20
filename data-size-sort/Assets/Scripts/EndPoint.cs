@@ -10,10 +10,12 @@ public class EndPoint : MonoBehaviour
     private Box box;
     private bool full;
     private string collidedName;    //Stores the object name of an object that is located at the end point
+    private string collidedTag;
 
     private void Start()
     {
         collidedName = "";
+        collidedTag = "";
         full = false;
     }
 
@@ -28,6 +30,7 @@ public class EndPoint : MonoBehaviour
         {
             full = true;
             collidedName = collider.name;
+            collidedTag = collider.tag;
         }
     }
 
@@ -41,6 +44,7 @@ public class EndPoint : MonoBehaviour
         {
             full = false;
             collidedName = "";
+            collidedTag = "";
         }
     }
 
@@ -55,8 +59,8 @@ public class EndPoint : MonoBehaviour
     /*
      * Returns the name of the object that has collided with the endpoint 
      */
-    public string collidedTag()
+    public string CollidedTag()
     {
-        return collidedName;
+        return collidedTag;
     }
 }

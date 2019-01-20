@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
         bool complete = true;
         for (int i = 0; i < endPoints.Length; i++)
         {
-            if (!endPoints[i].isFull() || !endPoints[i].tag.Equals(endPoints[i].collidedTag()))
+            if (!endPoints[i].isFull() || !endPoints[i].tag.Equals(endPoints[i].CollidedTag()))
             {
                 complete = false;
             }
