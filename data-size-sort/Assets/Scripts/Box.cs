@@ -20,10 +20,12 @@ public class Box : MonoBehaviour
 
     private string collidingTag;
     private bool dropped = false;           //Used to tell if the box has been dropped by the user into a valid space
+    private Collider2D collidedObject;
 
     private void Start()
     {
         collidingTag = "";
+        collidedObject = null;
     }
 
     //FIX ME
@@ -40,6 +42,7 @@ public class Box : MonoBehaviour
             transform.position = locationVector;
             collided = true;
             collidingTag = collider.tag;
+            collidedObject = collider;
         }
     }
 
@@ -48,7 +51,9 @@ public class Box : MonoBehaviour
      */
     private void OnTriggerExit2D(Collider2D collider)
     {
+        dropped = false;
         collided = false;
+        collidedObject = null;
     }
 
     /*
@@ -56,6 +61,7 @@ public class Box : MonoBehaviour
      */
     private void OnMouseDrag()
     {
+        dropped = false;
         Debug.Log(controller.whatIsHeld());
         if (controller.whatIsHeld() == null || controller.whatIsHeld().Equals(this))
         {
@@ -73,8 +79,10 @@ public class Box : MonoBehaviour
      */
     private void OnMouseUp()
     {
+        dropped = true;
         Debug.Log("Mouse up");
-        if (collided == false)
+        Debug.Log((collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull()));
+        if (collided == false || (collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull())) 
         {   
             Vector3 startPos = startPoint.transform.position;
             transform.position = startPos;
@@ -89,7 +97,7 @@ public class Box : MonoBehaviour
             {
                 Debug.Log("Wrong");
             }
-            dropped = true;
+            
         }
         controller.setHeld(null);
     }

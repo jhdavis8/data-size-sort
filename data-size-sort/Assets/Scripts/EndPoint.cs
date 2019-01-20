@@ -23,11 +23,20 @@ public class EndPoint : MonoBehaviour
      */
     private void OnTriggerStay2D(Collider2D collider)
     {
-        box = collider.GetComponent<Box>(); //Charlie really got this it was cool man
+        box = collider.GetComponent<Box>(); 
         if (box != null && box.IsDropped())
         {
             full = true;
-            collidedName = collider.tag;
+            collidedName = collider.name;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collidedName == collider.name)
+        {
+            full = false;
+            collidedName = "";
         }
     }
 
