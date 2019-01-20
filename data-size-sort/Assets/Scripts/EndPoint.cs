@@ -9,7 +9,7 @@ public class EndPoint : MonoBehaviour
 {
     private Box box;
     private bool full;
-    private string collidedName;
+    private string collidedName;    //Stores the object name of an object that is located at the end point
 
     private void Start()
     {
@@ -31,6 +31,10 @@ public class EndPoint : MonoBehaviour
         }
     }
 
+    /*
+     * Called when an object leaves an end point. Checks if the object leaving is the same
+     * as the object that was stored here. If it is, then the end point is emptied
+     */
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collidedName == collider.name)

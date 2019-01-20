@@ -20,7 +20,7 @@ public class Box : MonoBehaviour
 
     private string collidingTag;
     private bool dropped = false;           //Used to tell if the box has been dropped by the user into a valid space
-    private Collider2D collidedObject;
+    private Collider2D collidedObject;      //Used to store the collider associated with the object the box has collided with
 
     private void Start()
     {
@@ -28,10 +28,9 @@ public class Box : MonoBehaviour
         collidedObject = null;
     }
 
-    //FIX ME
     /*
-     * Checks for collisions. If collided with a non-starting location, store the tag
-     * of the colliding object. Sets the transform position to whatever it collides with??? (fix)
+     * Checks for collisions. If collided with an end point, store the tag and object
+     * of the colliding object. Sets the transform position to the end point location
      */
     private void OnTriggerStay2D(Collider2D collider)
     {
@@ -57,12 +56,11 @@ public class Box : MonoBehaviour
     }
 
     /*
-     * Handles dragging with the mouse
+     * Handles dragging with the mouse. Sets dropped to false
      */
     private void OnMouseDrag()
     {
         dropped = false;
-        Debug.Log(controller.whatIsHeld());
         if (controller.whatIsHeld() == null || controller.whatIsHeld().Equals(this))
         {
             controller.setHeld(this);
@@ -75,13 +73,13 @@ public class Box : MonoBehaviour
     }
 
     /*
-     * Places the box if the mouse is released. Resets the box to start if it hasn't collided with anything.
+     * Places the box if the mouse is released. Resets the box to start if it hasn't collided with an end point.
+     * Sets dropped to true =. 
      */
     private void OnMouseUp()
     {
         dropped = true;
         Debug.Log("Mouse up");
-        Debug.Log((collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull()));
         if (collided == false || (collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull())) 
         {   
             Vector3 startPos = startPoint.transform.position;
@@ -110,6 +108,9 @@ public class Box : MonoBehaviour
         return dropped;
     }
 
+    /*
+     * Checks if the object name is the same as this objects name
+     */ 
     public bool Equals(Object obj)
     {
         return this.name.Equals(obj.name);

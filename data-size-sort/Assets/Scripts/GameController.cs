@@ -37,11 +37,17 @@ public class GameController : MonoBehaviour
         }
     }
 
+    /*
+     * Sets the value of somethingHeld
+     */ 
     public void setHeld(Box setting)
     {
         somethingHeld = setting;
     }
 
+    /*
+     * Returns the value of somethingHeld
+     */
     public Box whatIsHeld()
     {
         return somethingHeld;

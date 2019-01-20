@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Reset_Button : MonoBehaviour
 {
+
+    /*
+     * Called every frame. Checks if mouse has been pressed and if so checks 
+     * if reset button object was clicked. If the reset button was presed, the 
+     * level is reset and the active scene is reloaded.
+     */
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
