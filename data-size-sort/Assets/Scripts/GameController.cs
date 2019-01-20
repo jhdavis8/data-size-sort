@@ -26,9 +26,11 @@ public class GameController : MonoBehaviour
         bool complete = true;
         for (int i = 0; i < endPoints.Length; i++)
         {
-            Debug.Log(!endPoints[i].isFull() || endPoints[i].tag != endPoints[i].CollidedTag());
+            //if(i == 3)
+                //Debug.Log(!endPoints[i].isFull() || endPoints[i].tag != endPoints[i].CollidedTag());
             if (!endPoints[i].isFull() || endPoints[i].tag != endPoints[i].CollidedTag())
             {
+                Debug.Log(endPoints[i].tag);
                 complete = false;
             }
         }
