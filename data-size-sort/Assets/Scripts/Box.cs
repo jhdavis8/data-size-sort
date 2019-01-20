@@ -122,6 +122,9 @@ public class Box : MonoBehaviour
         return this.name.Equals(obj.name);
     }
 
+    /*
+     * Returns whether the box has been placed in the correct position or not
+     */ 
     public bool CorrectDrop()
     {
         return correctPlace;

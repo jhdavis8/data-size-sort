@@ -18,8 +18,7 @@ public class GameController : MonoBehaviour
     }
 
     /*
-    * Called once per frame. This checks if all EndPoints in the scene are filled and have the correct 
-    * box in it.
+    * Called once per frame. This checks if all Boxes in the scene are in the correct end position 
     */
     void Update()
     {
