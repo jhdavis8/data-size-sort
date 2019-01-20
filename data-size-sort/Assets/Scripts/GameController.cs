@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
  */
 public class GameController : MonoBehaviour
 {
-    public EndPoint[] endPoints;
+    public Box[] boxes;
 
     private Box somethingHeld;
 
@@ -24,13 +24,10 @@ public class GameController : MonoBehaviour
     void Update()
     {
         bool complete = true;
-        for (int i = 0; i < endPoints.Length; i++)
+        for (int i = 0; i < boxes.Length; i++)
         {
-            //if(i == 3)
-                //Debug.Log(!endPoints[i].isFull() || endPoints[i].tag != endPoints[i].CollidedTag());
-            if (!endPoints[i].isFull() || endPoints[i].tag != endPoints[i].CollidedTag())
+            if (!boxes[i].CorrectDrop())
             {
-                Debug.Log(endPoints[i].tag);
                 complete = false;
             }
         }

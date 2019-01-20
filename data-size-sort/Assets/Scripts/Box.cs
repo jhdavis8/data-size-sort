@@ -21,6 +21,7 @@ public class Box : MonoBehaviour
     private string collidingTag;
     private bool dropped = false;           //Used to tell if the box has been dropped by the user into a valid space
     private Collider2D collidedObject;      //Used to store the collider associated with the object the box has collided with
+    private bool correctPlace = false;
 
     private void Start()
     {
@@ -85,15 +86,18 @@ public class Box : MonoBehaviour
         {   
             Vector3 startPos = startPoint.transform.position;
             transform.position = startPos;
+            correctPlace = false;
         }
         else
         {
             if (collidingTag == this.tag)
             {
+                correctPlace = true;
                 Debug.Log("Correct");
             }
             else
             {
+                correctPlace = false;
                 Debug.Log("Wrong");
             }
             
@@ -116,5 +120,10 @@ public class Box : MonoBehaviour
     public bool Equals(Object obj)
     {
         return this.name.Equals(obj.name);
+    }
+
+    public bool CorrectDrop()
+    {
+        return correctPlace;
     }
 }
