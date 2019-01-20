@@ -28,6 +28,7 @@ public class EndPoint : MonoBehaviour
         box = collider.GetComponent<Box>(); 
         if (box != null && box.IsDropped())
         {
+            Debug.Log("Good");
             full = true;
             collidedName = collider.name;
             collidedTag = collider.tag;

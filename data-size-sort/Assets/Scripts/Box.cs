@@ -60,7 +60,7 @@ public class Box : MonoBehaviour
      */
     private void OnMouseDrag()
     {
-        //this.GetComponent<SpriteRenderer>().sortingOrder = 2;
+        this.GetComponent<SpriteRenderer>().sortingOrder = 2;
         dropped = false;
         if (controller.whatIsHeld() == null || controller.whatIsHeld().Equals(this))
         {
@@ -99,7 +99,7 @@ public class Box : MonoBehaviour
             
         }
         controller.setHeld(null);
-        //this.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        this.GetComponent<SpriteRenderer>().sortingOrder = 1;
     }
 
     /*
