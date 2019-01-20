@@ -10,6 +10,13 @@ public class GameController : MonoBehaviour
 {
     public EndPoint[] endPoints;
 
+    private Box somethingHeld;
+
+    private void Start()
+    {
+        somethingHeld = null;
+    }
+
     /*
     * Called once per frame. This checks if all EndPoints in the scene are filled and have the correct 
     * box in it.
@@ -28,5 +35,15 @@ public class GameController : MonoBehaviour
         {
             SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex+1)%2);
         }
+    }
+
+    public void setHeld(Box setting)
+    {
+        somethingHeld = setting;
+    }
+
+    public Box whatIsHeld()
+    {
+        return somethingHeld;
     }
 }
