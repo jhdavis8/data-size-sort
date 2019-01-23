@@ -4521,5 +4521,8 @@ PrefabInstance:
       propertyPath: boxStyle.m_Padding.m_Bottom
       value: 10
       objectReference: {fileID: 0}
+      propertyPath: checkBox
+      value: 
+      objectReference: {fileID: 483485864}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bc53c3c2f613c246a3bba4be5526878, type: 3}
