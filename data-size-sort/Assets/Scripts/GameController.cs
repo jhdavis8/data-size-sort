@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public Box[] boxes;
 
     private Box somethingHeld;
+    private bool intro_complete = false;
 
     private void Start()
     {
@@ -36,9 +37,23 @@ public class GameController : MonoBehaviour
         }
     }
 
+    void OnGUI()
+    {
+        if (!intro_complete) // && SceneManager.GetActiveScene().name == "Scene1")
+        {
+            GUI.Box(new Rect(100, 100, 600, 400),
+                "This is the introduction and instructions.");
+            if (GUI.Button(new Rect(350, 350, 100, 50), "OK"))
+            {
+                Debug.Log("You clicked ok");
+                intro_complete = true;
+            }
+        }
+    }
+
     /*
      * Sets the value of somethingHeld
-     */ 
+     */
     public void setHeld(Box setting)
     {
         somethingHeld = setting;
