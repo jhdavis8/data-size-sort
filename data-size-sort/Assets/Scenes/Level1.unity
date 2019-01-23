@@ -4354,6 +4354,11 @@ PrefabInstance:
       propertyPath: boxes.Array.data[8]
       value: 
       objectReference: {fileID: 967760923}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: checkBox
+      value: 
+      objectReference: {fileID: 483485864}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bc53c3c2f613c246a3bba4be5526878, type: 3}
 --- !u!114 &388035856762908295 stripped

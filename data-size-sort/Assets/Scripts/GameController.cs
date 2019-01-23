@@ -9,9 +9,10 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public Box[] boxes;
-    public bool complete;
+    private bool complete;
     private Box somethingHeld;
     private bool intro_complete = false;
+    public Check checkBox;
 
     private void Start()
     {
@@ -31,11 +32,19 @@ public class GameController : MonoBehaviour
                 complete = false;
             }
         }
-      //  if (complete)
-        //{
-          //  SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex+1)%2);
-       // }
+        if (complete && checkBox.check())
+        {
+            Debug.Log("Complete");
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 2);
+        }
+        else if(checkBox.check())
+        {
+            checkBox.setCheck();
+            Debug.Log("Not all correct");
+        }
     }
+
+
     /*
     void OnGUI()
     {
@@ -66,4 +75,10 @@ public class GameController : MonoBehaviour
     {
         return somethingHeld;
     }
+       
+    public bool isComplete()
+    {
+        return complete;
+    }
+
 }
