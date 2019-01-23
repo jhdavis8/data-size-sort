@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
     }
 
 
-    /*
+
     void OnGUI()
     {
         if (!intro_complete) // && SceneManager.GetActiveScene().name == "Scene1")
@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour
             }
         }
     }
-    */
+    
     /*
      * Sets the value of somethingHeld
      */
