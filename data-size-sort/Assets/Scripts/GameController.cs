@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public Box[] boxes;
-
+    public bool complete;
     private Box somethingHeld;
     private bool intro_complete = false;
 
@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     */
     void Update()
     {
-        bool complete = true;
+        complete = true;
         for (int i = 0; i < boxes.Length; i++)
         {
             if (!boxes[i].CorrectDrop())
@@ -31,10 +31,10 @@ public class GameController : MonoBehaviour
                 complete = false;
             }
         }
-        if (complete)
-        {
-            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex+1)%2);
-        }
+      //  if (complete)
+        //{
+          //  SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex+1)%2);
+       // }
     }
 
     void OnGUI()
