@@ -18,6 +18,7 @@ TagManager:
   - PB
   - ZB
   - Reset
+  - Check
   layers:
   - Default
   - TransparentFX
