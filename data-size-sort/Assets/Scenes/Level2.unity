@@ -2612,7 +2612,7 @@ PrefabInstance:
     - target: {fileID: 1361248625313098862, guid: 2f7710b3e093bd74d943d9de8d401290,
         type: 3}
       propertyPath: m_TagString
-      value: Byte
+      value: KB
       objectReference: {fileID: 0}
     - target: {fileID: 1361248625313098833, guid: 2f7710b3e093bd74d943d9de8d401290,
         type: 3}
@@ -5908,6 +5908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HelloWorld
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361248625313098862, guid: 2f7710b3e093bd74d943d9de8d401290,
+        type: 3}
+      propertyPath: m_TagString
+      value: Byte
       objectReference: {fileID: 0}
     - target: {fileID: 1361248625313098833, guid: 2f7710b3e093bd74d943d9de8d401290,
         type: 3}
