@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
 {
     public Box[] boxes;
     public bool complete;
+    public GUIStyle boxStyle;
+    public GUIStyle buttonStyle;
     private Box somethingHeld;
     private bool intro_complete = false;
 
@@ -31,10 +33,12 @@ public class GameController : MonoBehaviour
                 complete = false;
             }
         }
-      //  if (complete)
-        //{
-          //  SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex+1)%2);
-       // }
+        /*
+        if (complete)
+        {
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex+1)%2);
+        }
+        */
     }
 
     void OnGUI()
@@ -42,8 +46,8 @@ public class GameController : MonoBehaviour
         if (!intro_complete) // && SceneManager.GetActiveScene().name == "Scene1")
         {
             GUI.Box(new Rect(100, 100, 600, 400),
-                "This is the introduction and instructions.");
-            if (GUI.Button(new Rect(350, 350, 100, 50), "OK"))
+                "This is the introduction and instructions.", boxStyle);
+            if (GUI.Button(new Rect(350, 350, 100, 50), "OK", buttonStyle))
             {
                 Debug.Log("You clicked ok");
                 intro_complete = true;

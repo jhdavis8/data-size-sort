@@ -4354,6 +4354,91 @@ PrefabInstance:
       propertyPath: boxes.Array.data[8]
       value: 
       objectReference: {fileID: 967760923}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: guiStyle.m_Normal.m_Background
+      value: 
+      objectReference: {fileID: 2800000, guid: 0faa42a7223214c4491e76b5cd694b60, type: 3}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: guiStyle.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: guiStyle.m_WordWrap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: guiStyle.m_Hover.m_Background
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: boxStyle.m_Normal.m_Background
+      value: 
+      objectReference: {fileID: 2800000, guid: 0faa42a7223214c4491e76b5cd694b60, type: 3}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: buttonStyle.m_Normal.m_Background
+      value: 
+      objectReference: {fileID: 2800000, guid: 9aa5c9010f50a7b4d93a99a9bb02601e, type: 3}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: buttonStyle.m_Hover.m_Background
+      value: 
+      objectReference: {fileID: 2800000, guid: d85e8716d969bb8438a580ad2ef8eaf8, type: 3}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: buttonStyle.m_Active.m_Background
+      value: 
+      objectReference: {fileID: 2800000, guid: c24a5cf8146f17e42a25e788a61b517b, type: 3}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: buttonStyle.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: boxStyle.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: boxStyle.m_WordWrap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: buttonStyle.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: buttonStyle.m_WordWrap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: boxStyle.m_Padding.m_Left
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: boxStyle.m_Padding.m_Top
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: boxStyle.m_Padding.m_Bottom
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 388035857108372666, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: boxStyle.m_Padding.m_Right
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bc53c3c2f613c246a3bba4be5526878, type: 3}
 --- !u!114 &388035856762908295 stripped
