@@ -35,5 +35,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-# Because its bad
-*.log
+# Special files to ignore
+Library/shadercompiler-UnityShaderCompiler.exe0.log
+Library/CurrentLayout.dwlt
+Library/assetDatabase3
