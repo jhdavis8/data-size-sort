@@ -106,6 +106,7 @@ public class Box : MonoBehaviour
         this.GetComponent<SpriteRenderer>().sortingOrder = 1;
     }
 
+
     /*
      * Accessor method for if the box has been snapped to a place.
      */

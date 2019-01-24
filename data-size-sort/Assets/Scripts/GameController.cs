@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     private Box somethingHeld;
     private bool intro_complete = false;
     public Check checkBox;
+    public EndPoint[] endPoints;
 
     private void Start()
     {
@@ -34,21 +35,40 @@ public class GameController : MonoBehaviour
                 complete = false;
             }
         }
-        if (complete && checkBox.check())
+        if (checkBox.check())
         {
-            Debug.Log("Complete");
-            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 2);
+            ColorBoxes();
+            if (complete)
+            {
+                Debug.Log("Complete");
+                SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 2);
+            }
+            else
+            {
+                checkBox.setCheck();
+                Debug.Log("Not all correct");
+            }
         }
-        else if(checkBox.check())
-        {
-            checkBox.setCheck();
-            Debug.Log("Not all correct");
-            //Test comment
-            //Another test comment
-        }
+        
     }
 
-
+    private void ColorBoxes()
+    {
+        for (int i = 0; i < boxes.Length; i++)
+        {
+            if (boxes[i].CorrectDrop())
+            {
+                Debug.Log(endPoints[i]);
+                Debug.Log(endPoints[i].GetComponent<SpriteRenderer>().color);
+                endPoints[i].GetComponent<SpriteRenderer>().color = Color.green;
+                Debug.Log(endPoints[i].GetComponent<SpriteRenderer>().color);
+            }
+            else
+            {
+                endPoints[i].GetComponent<SpriteRenderer>().color = Color.red;
+            }
+        }
+    }
 
     void OnGUI()
     {
