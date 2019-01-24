@@ -58,15 +58,11 @@ public class GameController : MonoBehaviour
         {
             if (boxes[i].CorrectDrop())
             {
-                Debug.Log(endPoints[i]);
                 endPoints[i].GetComponent<SpriteRenderer>().color = Color.green;
-                Debug.Log(endPoints[i].GetComponent<SpriteRenderer>().color);
-                Debug.Log(i);
             }
             else
             {
                 endPoints[i].GetComponent<SpriteRenderer>().color = Color.red;
-                Debug.Log(i);
             }
         }
     }
