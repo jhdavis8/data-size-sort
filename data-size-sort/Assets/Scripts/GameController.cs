@@ -43,6 +43,8 @@ public class GameController : MonoBehaviour
         {
             checkBox.setCheck();
             Debug.Log("Not all correct");
+            //Test comment
+            //Another test comment
         }
     }
 
