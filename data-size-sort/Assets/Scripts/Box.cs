@@ -59,6 +59,7 @@ public class Box : MonoBehaviour
     /*
      * Handles dragging with the mouse. Sets dropped to false
      */
+     
     private void OnMouseDrag()
     {
         this.GetComponent<SpriteRenderer>().sortingOrder = 2;
