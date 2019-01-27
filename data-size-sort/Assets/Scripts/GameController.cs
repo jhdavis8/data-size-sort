@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
             if (complete)
             {
                 Debug.Log("Complete");
-                SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 2);
+                SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 3);
             }
             else
             {
