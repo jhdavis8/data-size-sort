@@ -4884,6 +4884,12 @@ PrefabInstance:
       propertyPath: endPoints.Array.data[8]
       value: 
       objectReference: {fileID: 638945516}
+    - target: {fileID: 5814396289128163177, guid: 0bc53c3c2f613c246a3bba4be5526878,
+        type: 3}
+      propertyPath: skin
+      value: 
+      objectReference: {fileID: 11400000, guid: 47dbd61aac9cf2146a84bb279192a147,
+        type: 2}
     - target: {fileID: 388035857108372667, guid: 0bc53c3c2f613c246a3bba4be5526878,
         type: 3}
       propertyPath: m_LocalPosition.x

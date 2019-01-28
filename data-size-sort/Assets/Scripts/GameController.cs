@@ -9,8 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public Box[] boxes;
-    public GUIStyle boxStyle;
-    public GUIStyle buttonStyle;
+    public GUISkin skin;
     private bool complete;
     private Box somethingHeld;
     private bool intro_complete = false;
@@ -69,11 +68,12 @@ public class GameController : MonoBehaviour
 
     void OnGUI()
     {
+        GUI.skin = skin;
         if (!intro_complete) // && SceneManager.GetActiveScene().name == "Scene1")
         {
             GUI.Box(new Rect(100, 100, 600, 400),
-                "This is the introduction and instructions.", boxStyle);
-            if (GUI.Button(new Rect(350, 350, 100, 50), "OK", buttonStyle))
+                "This is the introduction and instructions.");
+            if (GUI.Button(new Rect(350, 350, 100, 50), "OK"))
             {
                 Debug.Log("You clicked ok");
                 intro_complete = true;
