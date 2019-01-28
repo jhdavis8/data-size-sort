@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     public Box[] boxes;
     public GUISkin skin;
     private bool complete;
+    private bool end_message_finished = true;
+    private bool show_end_message = true;
     private Box somethingHeld;
     private bool intro1_complete = false;
     private bool intro2_complete = false;
@@ -40,8 +42,13 @@ public class GameController : MonoBehaviour
             ColorBoxes();
             if (complete)
             {
+                show_end_message = true;
                 Debug.Log("Complete");
-                SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 3);
+                if (end_message_finished)
+                {
+                    SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 3);
+                }
+                
             }
             else
             {
