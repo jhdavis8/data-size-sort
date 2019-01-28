@@ -81,6 +81,9 @@ public class GameController : MonoBehaviour
         }
     }
 
+    /*
+     *  Called once per frame I think. Handles all the boxes and button for GUI messages at level start and end. 
+     */
     void OnGUI()
     {
         if (Screen.currentResolution.ToString().Contains("3840"))
