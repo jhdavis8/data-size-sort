@@ -75,9 +75,11 @@ public class GameController : MonoBehaviour
         {
             GUI.Box(new Rect(100, 100, 600, 400),
                 "Welcome to Data Size Sort. In this level, you need to order the various data size labels from smallest to largest." +
-                "\n -- You can pick up a label by clicking on it and dragging.\n -- Release each box into the black end points to sort them. " +
-                "\n -- Press check when you have finished to see if you are correct, and press hint to see a hint. " +
-                "\n -- Reset will return all the labels to their starting positions.");
+                "\n -- You can pick up a label by clicking on it and dragging." +
+                "\n -- Release each box into the black end points to sort them. " +
+                "\n -- Click check when you have finished to see if you are correct" +
+                "\n -- Click hint to see a hint. " +
+                "\n -- Click reset to send all the labels to their starting positions.");
             if (GUI.Button(new Rect(350, 350, 100, 50), "OK"))
             {
                 intro1_complete = true;
@@ -86,7 +88,11 @@ public class GameController : MonoBehaviour
         else if (!intro2_complete && SceneManager.GetActiveScene().name == "Level2")
         {
             GUI.Box(new Rect(100, 100, 600, 400),
-                "This is the introduction and instructions to Level 2.");
+                "Now, categorize these various real-world examples of data sizes by which data size you think they best fit under." +
+                "\n -- You can pick up a label by clicking on it and dragging." +
+                "\n -- Release each box into the black end points to categorize them. " +
+                "\n -- Click check when you have finished to see if you are correct." +
+                "\n -- Click return to send all the labels to their starting positions.");
             if (GUI.Button(new Rect(350, 350, 100, 50), "OK"))
             {
                 intro2_complete = true;
