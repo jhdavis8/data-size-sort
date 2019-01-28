@@ -6,13 +6,9 @@ using UnityEngine.SceneManagement;
 public class Yes_Button : MonoBehaviour
 {
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Changes back to original level 1 scene
+    // Changes back to original level 1 scene
+    void OnMouseDown()
+    {  
             SceneManager.LoadScene("Level1", LoadSceneMode.Single);
-        }
     }
 }
