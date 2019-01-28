@@ -5,18 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class No_Button : MonoBehaviour
 {
-
-    // Update is called once per frame
-    void Update()
+    // Exits the game if pressed
+    void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Exits the game if pressed
+
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit ();
 #endif     
-        }
     }
 }
