@@ -3189,6 +3189,7 @@ MonoBehaviour:
   - {fileID: 1414625160}
   - {fileID: 343145624}
   skin: {fileID: 11400000, guid: 47dbd61aac9cf2146a84bb279192a147, type: 2}
+  bigSkin: {fileID: 11400000, guid: 24173847311060c49bcfc5ed387ef968, type: 2}
   checkBox: {fileID: 209425993}
   endPoints:
   - {fileID: 225219166}
