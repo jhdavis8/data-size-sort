@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour
     public GUISkin skin;
     private bool complete;
     private Box somethingHeld;
-    private bool intro_complete = false;
+    private bool intro1_complete = false;
+    private bool intro2_complete = false;
     public Check checkBox;
     public EndPoint[] endPoints;
 
@@ -69,14 +70,26 @@ public class GameController : MonoBehaviour
     void OnGUI()
     {
         GUI.skin = skin;
-        if (!intro_complete) // && SceneManager.GetActiveScene().name == "Scene1")
+        Debug.Log(SceneManager.GetActiveScene().name);
+        if (!intro1_complete && SceneManager.GetActiveScene().name == "Level1")
         {
             GUI.Box(new Rect(100, 100, 600, 400),
-                "This is the introduction and instructions.");
+                "Welcome to Data Size Sort. In this level, you need to order the various data size labels from smallest to largest." +
+                "\n -- You can pick up a label by clicking on it and dragging.\n -- Release each box into the black end points to sort them. " +
+                "\n -- Press check when you have finished to see if you are correct, and press hint to see a hint. " +
+                "\n -- Reset will return all the labels to their starting positions.");
             if (GUI.Button(new Rect(350, 350, 100, 50), "OK"))
             {
-                Debug.Log("You clicked ok");
-                intro_complete = true;
+                intro1_complete = true;
+            }
+        }
+        else if (!intro2_complete && SceneManager.GetActiveScene().name == "Level2")
+        {
+            GUI.Box(new Rect(100, 100, 600, 400),
+                "This is the introduction and instructions to Level 2.");
+            if (GUI.Button(new Rect(350, 350, 100, 50), "OK"))
+            {
+                intro2_complete = true;
             }
         }
     }
