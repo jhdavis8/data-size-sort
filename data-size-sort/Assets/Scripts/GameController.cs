@@ -16,10 +16,10 @@ public class GameController : MonoBehaviour
     private Box somethingHeld;
     private bool intro1_complete = false;
     private bool intro2_complete = false;
-    private Rect boxDefault = new Rect(600, 100, 650, 450);
-    private Rect boxBig = new Rect(600, 100, 650, 450);
-    private Rect buttonDefault = new Rect(875, 375, 100, 50);
-    private Rect buttonBig = new Rect(875, 375, 100, 50);
+    private Rect boxDefault;
+    private Rect boxBig;
+    private Rect buttonDefault;
+    private Rect buttonBig;
     private Rect boxUsed;
     private Rect buttonUsed;
     public Check checkBox;
@@ -29,7 +29,11 @@ public class GameController : MonoBehaviour
     {
         somethingHeld = null;
         Debug.Log(Screen.currentResolution);
-    }
+        boxDefault = new Rect(600, 100, 650, 450);
+        boxBig = new Rect(boxDefault.x * 2, boxDefault.y * 2, boxDefault.width * 2, boxDefault.height * 2);
+        buttonDefault = new Rect(875, 375, 100, 50);
+        buttonBig = new Rect(buttonDefault.x * 2, buttonDefault.y * 2, buttonDefault.width * 2, buttonDefault.height * 2);
+}
 
     /*
     * Called once per frame. This checks if all Boxes in the scene are in the correct end position 
