@@ -25,7 +25,7 @@ public class EndPoint : MonoBehaviour
      */
     private void OnTriggerStay2D(Collider2D collider)
     {
-        box = collider.GetComponent<Box>(); 
+        box = collider.GetComponent<Box>();
         if (box != null && box.IsDropped())
         {
             full = true;

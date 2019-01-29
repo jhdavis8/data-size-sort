@@ -16,10 +16,10 @@ public class GameController : MonoBehaviour
     private Box somethingHeld;
     private bool intro1_complete = false;
     private bool intro2_complete = false;
-    private Rect boxDefault;
-    private Rect boxBig;
-    private Rect buttonDefault;
-    private Rect buttonBig;
+    private Rect boxDefault = new Rect(600, 100, 650, 450);
+    private Rect boxBig = new Rect(600, 100, 650, 450);
+    private Rect buttonDefault = new Rect(875, 375, 100, 50);
+    private Rect buttonBig = new Rect(875, 375, 100, 50);
     private Rect boxUsed;
     private Rect buttonUsed;
     public Check checkBox;
@@ -29,11 +29,7 @@ public class GameController : MonoBehaviour
     {
         somethingHeld = null;
         Debug.Log(Screen.currentResolution);
-        boxDefault = new Rect(600, 100, 650, 450);
-        boxBig = new Rect(boxDefault.x * 2, boxDefault.y * 2, boxDefault.width * 2, boxDefault.height * 2);
-        buttonDefault = new Rect(875, 375, 100, 50);
-        buttonBig = new Rect(buttonDefault.x * 2, buttonDefault.y * 2, buttonDefault.width * 2, buttonDefault.height * 2);
-}
+    }
 
     /*
     * Called once per frame. This checks if all Boxes in the scene are in the correct end position 
@@ -63,27 +59,33 @@ public class GameController : MonoBehaviour
                 Debug.Log("Not all correct");
             }
         }
-        
-    }
 
+    }
+    //check for color
+    //wrongly asigns the top box to green instead fo bottom
+    //check for level two so that the code only does this 
     private void ColorBoxes()
     {
+        //if(Scene.current.. = level2) 
         for (int i = 0; i < boxes.Length; i++)
         {
             if (boxes[i].CorrectDrop())
             {
-                endPoints[i].GetComponent<SpriteRenderer>().color = Color.green;
+                boxes[i].EndPoint().GetComponent<SpriteRenderer>().color = Color.green;
+                // endPoints[i].GetComponent<SpriteRenderer>().color = Color.green;
+            }
+            else if (boxes[i].IsDropped() == false)
+            {
+                endPoints[i].GetComponent<SpriteRenderer>().color = Color.red;
             }
             else
             {
+                // boxes[i].EndPoint().GetComponent<SpriteRenderer>().color = Color.red;
                 endPoints[i].GetComponent<SpriteRenderer>().color = Color.red;
             }
         }
     }
 
-    /*
-     *  Called once per frame I think. Handles all the boxes and button for GUI messages at level start and end. 
-     */
     void OnGUI()
     {
         if (Screen.currentResolution.ToString().Contains("3840"))
@@ -91,7 +93,7 @@ public class GameController : MonoBehaviour
             GUI.skin = bigSkin;
             boxUsed = boxBig;
             buttonUsed = buttonBig;
-        }   
+        }
         else
         {
             GUI.skin = skin;
@@ -136,7 +138,7 @@ public class GameController : MonoBehaviour
             }
         }
     }
-    
+
     /*
      * Sets the value of somethingHeld
      */
@@ -152,7 +154,7 @@ public class GameController : MonoBehaviour
     {
         return somethingHeld;
     }
-       
+
     public bool isComplete()
     {
         return complete;

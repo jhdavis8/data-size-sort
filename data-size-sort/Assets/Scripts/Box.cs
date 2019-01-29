@@ -22,6 +22,8 @@ public class Box : MonoBehaviour
     private bool dropped = false;           //Used to tell if the box has been dropped by the user into a valid space
     private Collider2D collidedObject;      //Used to store the collider associated with the object the box has collided with
     private bool correctPlace = false;
+    private EndPoint endpoint;
+    private EndPoint finalEndpoint;
 
     private void Start()
     {
@@ -38,6 +40,7 @@ public class Box : MonoBehaviour
         if (collider.GetComponent<EndPoint>() != null)
         {
             //Sets location of object to location of object it has collided with
+            endpoint = collider.GetComponent<EndPoint>();
             Vector3 locationVector = collider.gameObject.transform.position;
             transform.position = locationVector;
             collided = true;
@@ -59,7 +62,7 @@ public class Box : MonoBehaviour
     /*
      * Handles dragging with the mouse. Sets dropped to false
      */
-     
+
     private void OnMouseDrag()
     {
         this.GetComponent<SpriteRenderer>().sortingOrder = 2;
@@ -72,7 +75,7 @@ public class Box : MonoBehaviour
             Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             transform.position = objPosition;
         }
-        
+
     }
 
     /*
@@ -83,8 +86,9 @@ public class Box : MonoBehaviour
     {
         dropped = true;
         Debug.Log("Mouse up");
-        if (collided == false || (collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull())) 
-        {   
+        finalEndpoint = endpoint;
+        if (collided == false || (collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull()))
+        {
             Vector3 startPos = startPoint.transform.position;
             transform.position = startPos;
             correctPlace = false;
@@ -101,7 +105,7 @@ public class Box : MonoBehaviour
                 correctPlace = false;
                 Debug.Log("Wrong");
             }
-            
+
         }
         controller.setHeld(null);
         this.GetComponent<SpriteRenderer>().sortingOrder = 1;
@@ -118,7 +122,7 @@ public class Box : MonoBehaviour
 
     /*
      * Checks if the object name is the same as this objects name
-     */ 
+     */
     public bool Equals(Object obj)
     {
         return this.name.Equals(obj.name);
@@ -126,9 +130,13 @@ public class Box : MonoBehaviour
 
     /*
      * Returns whether the box has been placed in the correct position or not
-     */ 
+     */
     public bool CorrectDrop()
     {
         return correctPlace;
+    }
+    public EndPoint EndPoint()
+    {
+        return finalEndpoint;
     }
 }
