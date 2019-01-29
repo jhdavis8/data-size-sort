@@ -67,22 +67,21 @@ public class GameController : MonoBehaviour
     private void ColorBoxes()
     {
         //if(Scene.current.. = level2) 
-        for (int i = 0; i < boxes.Length; i++)
+        for (int i = 0; i < endPoints.Length; i++)
         {
-            if (boxes[i].CorrectDrop())
-            {
-                boxes[i].EndPoint().GetComponent<SpriteRenderer>().color = Color.green;
+            
+            if (endPoints[i].Correct())
+            {      
+                endPoints[i].GetComponent<SpriteRenderer>().color = Color.green;
                 // endPoints[i].GetComponent<SpriteRenderer>().color = Color.green;
-            }
-            else if (boxes[i].IsDropped() == false)
-            {
-                endPoints[i].GetComponent<SpriteRenderer>().color = Color.red;
             }
             else
             {
                 // boxes[i].EndPoint().GetComponent<SpriteRenderer>().color = Color.red;
                 endPoints[i].GetComponent<SpriteRenderer>().color = Color.red;
             }
+
+            
         }
     }
 
@@ -100,7 +99,7 @@ public class GameController : MonoBehaviour
             boxUsed = boxDefault;
             buttonUsed = buttonDefault;
         }
-        Debug.Log(SceneManager.GetActiveScene().name);
+        //Debug.Log(SceneManager.GetActiveScene().name);
         if (!intro1_complete && SceneManager.GetActiveScene().name == "Level1")
         {
             GUI.Box(boxUsed,

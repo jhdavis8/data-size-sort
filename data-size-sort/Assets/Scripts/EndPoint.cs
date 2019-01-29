@@ -15,8 +15,9 @@ public class EndPoint : MonoBehaviour
     private void Start()
     {
         collidedName = "";
-        collidedTag = "";
+        collidedTag = "None";
         full = false;
+        box = null;
     }
 
     /*
@@ -44,7 +45,8 @@ public class EndPoint : MonoBehaviour
         {
             full = false;
             collidedName = "";
-            collidedTag = "";
+            collidedTag = "None";
+            box = null;
         }
     }
 
@@ -62,5 +64,17 @@ public class EndPoint : MonoBehaviour
     public string CollidedTag()
     {
         return collidedTag;
+    }
+
+
+    public Box getBox()
+    {
+        return box;
+    }
+
+
+    public bool Correct()
+    {
+        return collidedTag == this.tag;
     }
 }
