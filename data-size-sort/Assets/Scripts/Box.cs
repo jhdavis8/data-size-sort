@@ -24,9 +24,11 @@ public class Box : MonoBehaviour
     private bool correctPlace = false;
     private EndPoint endpoint;
     private EndPoint finalEndpoint;
+    private Vector3 startPos;
 
     private void Start()
     {
+        startPos = transform.position;
         collidingTag = "";
         collidedObject = null;
     }
@@ -89,9 +91,12 @@ public class Box : MonoBehaviour
         finalEndpoint = endpoint;
         if (collided == false || (collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull()))
         {
-            Vector3 startPos = startPoint.transform.position;
+
+            Debug.Log(transform.position);
             transform.position = startPos;
             correctPlace = false;
+
+            Debug.Log(transform.position);
         }
         else
         {
