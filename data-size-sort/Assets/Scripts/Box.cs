@@ -62,7 +62,8 @@ public class Box : MonoBehaviour
     }
 
     /*
-     * Handles dragging with the mouse. Sets dropped to false
+     * Handles dragging with the mouse. Sets dropped to false. Only can drag if
+     * there is nothing else being dragged
      */
 
     private void OnMouseDrag()
@@ -82,7 +83,7 @@ public class Box : MonoBehaviour
 
     /*
      * Places the box if the mouse is released. Resets the box to start if it hasn't collided with an end point.
-     * Sets dropped to true =. 
+     * Sets dropped to true. 
      */
     private void OnMouseUp()
     {
@@ -140,6 +141,10 @@ public class Box : MonoBehaviour
     {
         return correctPlace;
     }
+
+    /*
+     * returns the endpoint that it has encounterd
+     */
     public EndPoint EndPoint()
     {
         return finalEndpoint;

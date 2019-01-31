@@ -32,7 +32,8 @@ public class GameController : MonoBehaviour
     }
 
     /*
-    * Called once per frame. This checks if all Boxes in the scene are in the correct end position 
+    * Called once per frame. This checks if all Boxes in the scene are in the correct end position
+    * If the check button is pressed, then it will set variables to signal the end of a level.
     */
     void Update()
     {
@@ -61,23 +62,22 @@ public class GameController : MonoBehaviour
         }
 
     }
-    //check for color
-    //wrongly asigns the top box to green instead fo bottom
-    //check for level two so that the code only does this 
+ 
+    /*
+     * Colors each of the end points if it is correct. If correct, it is assigned the color green.
+     * If incorrect, it is changed to red
+     */ 
     private void ColorBoxes()
     {
-        //if(Scene.current.. = level2) 
         for (int i = 0; i < endPoints.Length; i++)
         {
             
             if (endPoints[i].Correct())
             {      
                 endPoints[i].GetComponent<SpriteRenderer>().color = Color.green;
-                // endPoints[i].GetComponent<SpriteRenderer>().color = Color.green;
             }
             else
             {
-                // boxes[i].EndPoint().GetComponent<SpriteRenderer>().color = Color.red;
                 endPoints[i].GetComponent<SpriteRenderer>().color = Color.red;
             }
 
@@ -85,6 +85,11 @@ public class GameController : MonoBehaviour
         }
     }
 
+    /*
+     * Controls the messages dispayed for the user. First, it checks the screen resolution to 
+     * ensure it is correct visually for those in 4k and those that are not. Then it displays 
+     * the correct message depending on which level the player is at
+     */ 
     void OnGUI()
     {
         if (Screen.currentResolution.ToString().Contains("3840"))
@@ -154,6 +159,9 @@ public class GameController : MonoBehaviour
         return somethingHeld;
     }
 
+    /*
+     * Returns whether the level is complete
+     */ 
     public bool isComplete()
     {
         return complete;

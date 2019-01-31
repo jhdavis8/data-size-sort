@@ -66,13 +66,17 @@ public class EndPoint : MonoBehaviour
         return collidedTag;
     }
 
-
+    /*
+     * Returns the box that has collided with the endpoint
+     */ 
     public Box getBox()
     {
         return box;
     }
 
-
+    /*
+     * Returns whether the endpoint has the correct object placed at it
+     */ 
     public bool Correct()
     {
         return collidedTag == this.tag;
