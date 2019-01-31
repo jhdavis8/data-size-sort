@@ -33,11 +33,11 @@ public class Box : MonoBehaviour
         collidedObject = null;
     }
 
-    /*
-     * Checks for collisions. If collided with an end point, store the tag and object
-     * of the colliding object. Sets the transform position to the end point location
-     */
-    private void OnTriggerStay2D(Collider2D collider)
+        /*
+         * Checks for collisions. If collided with an end point, store the tag and object
+         * of the colliding object. Sets the transform position to the end point location
+         */
+        private void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.GetComponent<EndPoint>() != null)
         {
