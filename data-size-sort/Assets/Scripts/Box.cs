@@ -88,28 +88,21 @@ public class Box : MonoBehaviour
     private void OnMouseUp()
     {
         dropped = true;
-        Debug.Log("Mouse up");
         finalEndpoint = endpoint;
         if (collided == false || (collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull()))
         {
-
-            Debug.Log(transform.position);
             transform.position = startPos;
             correctPlace = false;
-
-            Debug.Log(transform.position);
         }
         else
         {
             if (collidingTag == this.tag)
             {
                 correctPlace = true;
-                Debug.Log("Correct");
             }
             else
             {
                 correctPlace = false;
-                Debug.Log("Wrong");
             }
 
         }

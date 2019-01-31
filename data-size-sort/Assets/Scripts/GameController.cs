@@ -28,7 +28,6 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         somethingHeld = null;
-        Debug.Log(Screen.currentResolution);
     }
 
     /*
@@ -52,12 +51,10 @@ public class GameController : MonoBehaviour
             if (complete)
             {
                 show_end_message = true;
-                Debug.Log("Complete");
             }
             else
             {
                 checkBox.setCheck();
-                Debug.Log("Not all correct");
             }
         }
 
