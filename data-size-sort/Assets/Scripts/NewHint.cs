@@ -1,6 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System;
+using UnityEngine.UI;
 
 public class NewHint : MonoBehaviour
 {
@@ -35,7 +37,7 @@ public class NewHint : MonoBehaviour
     Box s_zb1 = null;
     Box s_zb2 = null;
     Box s_zb3 = null;
-
+    public Text hintText;
     List<Box> boxes = new List<Box>();
     /*
      * Called at the start of the scene
@@ -210,13 +212,51 @@ public class NewHint : MonoBehaviour
      * Called whenever the hint button is clicked. It will toggle whether the boxes
      * show their hints or not
      */
-    void OnMouseOver()
+    void OnMouseDown()
     {
-        if (s_bit1.CorrectDrop())
+        if (boxes.Count >= 0)
         {
-            int count = boxes.Count;
-            Debug.Log(count);
+            foreach (Box b in boxes)
+            {
+                if (b.CorrectDrop())
+                {
+                    boxes.Remove(b);
+                }
+            }
+
+            System.Random rnd = new System.Random();
+            int length = boxes.Count - 1;
+            int num = rnd.Next(0, length);
+            Box temp = boxes[num];
+
+            /*
+             * Hint text output that has been randomly 
+             * selected
+             */
+
+            /*
+             * 
+            if (temp.Equals(s_bit1))
+            {
+                Text t_bit1 = GameObject.Find("Bit1").GetComponent<Text>();
+                t_bit1.transform.position = new Vector3(-310, -480, 0);
+            }
+            if (temp.Equals(s_bit2))
+            {
+                Text t_bit2 = GameObject.Find("Bit2").GetComponent<Text>();
+                t_bit2.transform.position = new Vector3(-310, -480, 0);
+            }
+            if (temp.Equals(s_bytes1))
+            {
+                Text t_bytes1 = GameObject.Find("Byte1").GetComponent<Text>();
+                t_bytes1.transform.position = new Vector3(-310, -480, 0);
+            }
+            if (temp.Equals(s_bytes2))
+            {
+                Text t_bytes2 = GameObject.Find("Byte2").GetComponent<Text>();
+                t_bytes2.transform.position = new Vector3(-310, -480, 0);
+            }
+            */
         }
-        
     }
 }
