@@ -11,7 +11,10 @@ public class EndPoint : MonoBehaviour
     private bool full;
     private string collidedName;    //Stores the object name of an object that is located at the end point
     private string collidedTag;
-
+    
+    /*
+     * Called at init. Sets up flags and variables.
+     */
     private void Start()
     {
         collidedName = "";
@@ -50,6 +53,10 @@ public class EndPoint : MonoBehaviour
         }
     }
 
+    /*
+     * Sets the flags of a endPoint to that of an endPoint that has already received a box. Used for boxes which
+     * are given as correct at the start of level 2.
+     */
     public void setStartBox(Box abox)
     {
         full = true;

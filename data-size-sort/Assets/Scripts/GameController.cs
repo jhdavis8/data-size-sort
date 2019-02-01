@@ -25,6 +25,9 @@ public class GameController : MonoBehaviour
     public Check checkBox;
     public EndPoint[] endPoints;
 
+    /*
+     * Called at initialization, sets up the three random choices given to the player in level 2.
+     */
     private void Start()
     {
         somethingHeld = null;
@@ -145,6 +148,9 @@ public class GameController : MonoBehaviour
         }
     }
 
+    /*
+     * Picks the three random correct boxes to place at level start. Guarantees that they are distinct.
+     */
     private void ThreeRandomCorrect()
     {
         int[] numbers = new int[3];
@@ -175,7 +181,7 @@ public class GameController : MonoBehaviour
 
 
     /*
-     * Sets the value of somethingHeld
+     * Sets the value of somethingHeld, the flag indicating if the mouse has a box held right now.
      */
     public void setHeld(Box setting)
     {

@@ -43,6 +43,7 @@ public class NewHint : MonoBehaviour
     Box s_zb2 = null;
     Box s_zb3 = null;
     List<Box> boxes = new List<Box>();
+
     /*
      * Called at the start of the scene
      */

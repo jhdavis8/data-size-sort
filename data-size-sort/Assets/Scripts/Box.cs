@@ -33,11 +33,11 @@ public class Box : MonoBehaviour
         collidedObject = null;
     }
 
-        /*
-         * Checks for collisions. If collided with an end point, store the tag and object
-         * of the colliding object. Sets the transform position to the end point location
-         */
-        private void OnTriggerStay2D(Collider2D collider)
+    /*
+     * Checks for collisions. If collided with an end point, store the tag and object
+     * of the colliding object. Sets the transform position to the end point location
+     */
+    private void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.GetComponent<EndPoint>() != null)
         {
@@ -65,7 +65,6 @@ public class Box : MonoBehaviour
      * Handles dragging with the mouse. Sets dropped to false. Only can drag if
      * there is nothing else being dragged
      */
-
     private void OnMouseDrag()
     {
         this.GetComponent<SpriteRenderer>().sortingOrder = 2;
@@ -143,6 +142,9 @@ public class Box : MonoBehaviour
         return finalEndpoint;
     }
 
+    /*
+     * Setter for dropped, the flag for if the box has been dropped in an endpoint
+     */
     public void setDropped(bool drop)
     {
         dropped = drop;
