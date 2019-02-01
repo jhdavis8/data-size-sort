@@ -28,6 +28,11 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         somethingHeld = null;
+        if(SceneManager.GetActiveScene().name == "Level2")
+        {
+            ThreeRandomCorrect();
+        }
+        
     }
 
     /*
@@ -40,7 +45,7 @@ public class GameController : MonoBehaviour
         show_end_message = false;
         for (int i = 0; i < boxes.Length; i++)
         {
-            if (!boxes[i].CorrectDrop())
+            if (!endPoints[i].Correct())
             {
                 complete = false;
             }
@@ -139,6 +144,35 @@ public class GameController : MonoBehaviour
             }
         }
     }
+
+    private void ThreeRandomCorrect()
+    {
+        int[] numbers = new int[3];
+        for(int i = 0;i < 3; i++)
+        {
+            numbers[i] = Random.Range(0, boxes.Length);
+            for(int j = 0;j < i; j++)
+            {
+                if (numbers[j] == numbers[i])
+                {
+                    numbers[i] = Random.Range(0, boxes.Length);
+                    j=0;
+                }
+            }
+        }
+
+        for(int i = 0;i < 3; i++)
+        {
+            int index = numbers[i];
+            boxes[index].transform.position = endPoints[index].transform.position;
+            endPoints[index].GetComponent<SpriteRenderer>().color = Color.green;
+            endPoints[index].setStartBox(boxes[index]);
+            boxes[index].setDropped(true);
+            Debug.Log(endPoints[index].Correct());
+        }
+
+    }
+
 
     /*
      * Sets the value of somethingHeld

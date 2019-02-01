@@ -50,6 +50,14 @@ public class EndPoint : MonoBehaviour
         }
     }
 
+    public void setStartBox(Box abox)
+    {
+        full = true;
+        collidedName = abox.name;
+        collidedTag = abox.tag;
+        box = abox;
+    }
+
     /*
      * Returns whether or not the EndPoint has a box dropped/snapped to it already
      */
