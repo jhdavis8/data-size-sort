@@ -26,6 +26,8 @@ public class Box : MonoBehaviour
     private EndPoint finalEndpoint;
     private Vector3 startPos;
 
+    private bool movable = true;
+
     private void Start()
     {
         startPos = transform.position;
@@ -70,7 +72,7 @@ public class Box : MonoBehaviour
     {
         this.GetComponent<SpriteRenderer>().sortingOrder = 2;
         dropped = false;
-        if (controller.whatIsHeld() == null || controller.whatIsHeld().Equals(this))
+        if ((controller.whatIsHeld() == null || controller.whatIsHeld().Equals(this)) && movable)
         {
             controller.setHeld(this);
             //Code sets object's position to match the location of the mouse
@@ -147,4 +149,10 @@ public class Box : MonoBehaviour
     {
         dropped = drop;
     } 
+
+    public void setMovable(bool move)
+    {
+        movable = move;
+    }
 }
+

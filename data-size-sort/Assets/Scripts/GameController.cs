@@ -168,7 +168,7 @@ public class GameController : MonoBehaviour
             endPoints[index].GetComponent<SpriteRenderer>().color = Color.green;
             endPoints[index].setStartBox(boxes[index]);
             boxes[index].setDropped(true);
-            Debug.Log(endPoints[index].Correct());
+            boxes[index].setMovable(false);
         }
 
     }
