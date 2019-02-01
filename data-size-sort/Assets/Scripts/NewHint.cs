@@ -234,30 +234,29 @@ public class NewHint : MonoBehaviour
             int length = boxes.Count - 1;
             int num = rnd.Next(0, length);
             Box temp = boxes[num];
-            Debug.Log(num);
+            Debug.Log(temp);
 
             /*
              * Hint text output that has been randomly 
              * selected
              */
-
             if (hintbutton.sprite.Equals(i_blank))
             {
                 if (s_bit1 != null)
                 {
                     if (temp.Equals(s_bit1))
                     {
-                        hintbutton.sprite = i_zb1;
+                        hintbutton.sprite = i_bit1;
                     }
                 }
-                else if (s_bit2 != null)
+                if (s_bit2 != null)
                 {
                     if (temp.Equals(s_bit2))
                     {
                         hintbutton.sprite = i_bit2;
                     }
                 }
-                else if (s_bit3 != null)
+                if (s_bit3 != null)
                 {
                     if (temp.Equals(s_bit3))
                     {
@@ -271,161 +270,161 @@ public class NewHint : MonoBehaviour
                         hintbutton.sprite = i_bytes1;
                     }
                 }
-                else if (s_bytes2 != null)
+                if (s_bytes2 != null)
                 {
                     if (temp.Equals(s_bytes2))
                     {
                         hintbutton.sprite = i_bytes2;
                     }
                 }
-                else if (s_bytes3 != null)
+                if (s_bytes3 != null)
                 {
                     if (temp.Equals(s_bytes3))
                     {
                         hintbutton.sprite = i_bytes3;
                     }
                 }
-                else if (s_kb1 != null)
+                if (s_kb1 != null)
                 {
                     if (temp.Equals(s_kb1))
                     {
                         hintbutton.sprite = i_kb1;
                     }
                 }
-                else if (s_kb2 != null)
+                if (s_kb2 != null)
                 {
                     if (temp.Equals(s_kb2))
                     {
                         hintbutton.sprite = i_kb2;
                     }
                 }
-                else if (s_kb3 != null)
+                if (s_kb3 != null)
                 {
                     if (temp.Equals(s_kb3))
                     {
                         hintbutton.sprite = i_kb3;
                     }
                 }
-                else if (s_mb1 != null)
+                if (s_mb1 != null)
                 {
                     if (temp.Equals(s_mb1))
                     {
                         hintbutton.sprite = i_mb1;
                     }
                 }
-                else if (s_mb2 != null)
+                if (s_mb2 != null)
                 {
                     if (temp.Equals(s_mb2))
                     {
                         hintbutton.sprite = i_mb2;
                     }
                 }
-                else if (s_mb3 != null)
+                if (s_mb3 != null)
                 {
                     if (temp.Equals(s_mb3))
                     {
                         hintbutton.sprite = i_mb3;
                     }
                 }
-                else if (s_gb1 != null)
+                if (s_gb1 != null)
                 {
                     if (temp.Equals(s_gb1))
                     {
                         hintbutton.sprite = i_gb1;
                     }
                 }
-                else if (s_gb2 != null)
+                if (s_gb2 != null)
                 {
                     if (temp.Equals(s_gb2))
                     {
                         hintbutton.sprite = i_gb2;
                     }
                 }
-                else if (s_gb3 != null)
+                if (s_gb3 != null)
                 {
                     if (temp.Equals(s_gb3))
                     {
                         hintbutton.sprite = i_gb3;
                     }
                 }
-                else if (s_tb1 != null)
+                if (s_tb1 != null)
                 {
                     if (temp.Equals(s_tb1))
                     {
                         hintbutton.sprite = i_tb1;
                     }
                 }
-                else if (s_tb2 != null)
+                if (s_tb2 != null)
                 {
                     if (temp.Equals(s_tb2))
                     {
                         hintbutton.sprite = i_tb2;
                     }
                 }
-                else if (s_tb3)
+                if (s_tb3)
                 {
                     if (temp.Equals(s_tb3))
                     {
                         hintbutton.sprite = i_tb3;
                     }
                 }
-                else if (s_pb1 != null)
+                if (s_pb1 != null)
                 {
                     if (temp.Equals(s_pb1))
                     {
                         hintbutton.sprite = i_pb1;
                     }
                 }
-                else if (s_pb2 != null)
+                if (s_pb2 != null)
                 {
                     if (temp.Equals(s_pb2))
                     {
                         hintbutton.sprite = i_pb2;
                     }
                 }
-                else if (s_pb3 != null)
+                if (s_pb3 != null)
                 {
                     if (temp.Equals(s_pb3))
                     {
                         hintbutton.sprite = i_pb3;
                     }
                 }
-                else if (s_eb1 != null)
+                if (s_eb1 != null)
                 {
                     if (temp.Equals(s_eb1))
                     {
                         hintbutton.sprite = i_eb1;
                     }
                 }
-                else if (s_eb2 != null)
+                if (s_eb2 != null)
                 {
                     if (temp.Equals(s_eb2))
                     {
                         hintbutton.sprite = i_eb2;
                     }
                 }
-                else if (s_eb3 != null)
+                if (s_eb3 != null)
                 {
                     if (temp.Equals(s_eb3))
                     {
                         hintbutton.sprite = i_eb3;
                     }
                 }
-                else if (s_zb1 != null)
+                if (s_zb1 != null)
                 {
                     if (temp.Equals(s_zb1))
                     {
                         hintbutton.sprite = i_zb1;
                     }
                 }
-                else if (s_zb2 != null)
+                if (s_zb2 != null)
                 {
                     if (temp.Equals(s_zb2))
                     {
                         hintbutton.sprite = i_zb2;
                     }
                 }
-                else if (s_zb3 != null)
+                if (s_zb3 != null)
                 {
                     if (temp.Equals(s_zb3))
                     {
