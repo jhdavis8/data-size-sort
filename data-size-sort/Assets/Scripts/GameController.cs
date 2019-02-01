@@ -28,7 +28,11 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         somethingHeld = null;
-        ThreeRandomCorrect();
+        if(SceneManager.GetActiveScene().name == "Level2")
+        {
+            ThreeRandomCorrect();
+        }
+        
     }
 
     /*
