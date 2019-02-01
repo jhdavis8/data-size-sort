@@ -16,10 +16,10 @@ public class GameController : MonoBehaviour
     private Box somethingHeld;
     private bool intro1_complete = false;
     private bool intro2_complete = false;
-    private Rect boxDefault = new Rect(600, 100, 650, 450);
-    private Rect boxBig = new Rect(600, 100, 650, 450);
-    private Rect buttonDefault = new Rect(875, 375, 100, 50);
-    private Rect buttonBig = new Rect(875, 375, 100, 50);
+    private Rect boxDefault = new Rect(550, 100, 750, 400);
+    private Rect boxBig = new Rect(550 * 2, 100 * 2, 750 * 2, 400 * 2);
+    private Rect buttonDefault = new Rect(875, 400, 100, 50);
+    private Rect buttonBig = new Rect(875 * 2, 400 * 2, 100 * 2, 50 * 2);
     private Rect boxUsed;
     private Rect buttonUsed;
     public Check checkBox;
@@ -111,11 +111,11 @@ public class GameController : MonoBehaviour
         {
             GUI.Box(boxUsed,
                 "Welcome to Data Size Sort. In this level, you need to order the various data size labels from smallest to largest." +
-                "\n -- You can pick up a label by clicking on it and dragging." +
-                "\n -- Release each box into the black end points to sort them. " +
-                "\n -- Click check when you have finished to see if you are correct" +
-                "\n -- Click hint to see a hint. " +
-                "\n -- Click reset to send all the labels to their starting positions.");
+                "\n    -- You can pick up a label by clicking on it and dragging." +
+                "\n    -- Release each box into the black end points to sort them. " +
+                "\n    -- Click check when you have finished to see if you are correct" +
+                "\n    -- Click hint to see a hint. " +
+                "\n    -- Click reset to send all the labels to their starting positions.");
             if (GUI.Button(buttonUsed, "OK"))
             {
                 intro1_complete = true;
@@ -125,10 +125,10 @@ public class GameController : MonoBehaviour
         {
             GUI.Box(boxUsed,
                 "Now, categorize these various real-world examples of data sizes by which data size you think they best fit under." +
-                "\n -- You can pick up a label by clicking on it and dragging." +
-                "\n -- Release each box into the black end points to categorize them. " +
-                "\n -- Click check when you have finished to see if you are correct." +
-                "\n -- Click return to send all the labels to their starting positions.");
+                "\n    -- You can pick up a label by clicking on it and dragging." +
+                "\n    -- Release each box into the black end points to categorize them. " +
+                "\n    -- Click check when you have finished to see if you are correct." +
+                "\n    -- Click return to send all the labels to their starting positions.");
             if (GUI.Button(buttonUsed, "OK"))
             {
                 intro2_complete = true;
