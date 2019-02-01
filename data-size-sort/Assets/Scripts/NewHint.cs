@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class NewHint : MonoBehaviour
 {
+    public Sprite i_blank, i_bit1, i_bit2, i_bit3, i_bytes1, i_bytes2, i_bytes3, 
+            i_kb1, i_kb2, i_kb3, i_mb1, i_mb2, i_mb3, i_gb1, i_gb2, i_gb3, 
+            i_tb1, i_tb2, i_tb3, i_pb1, i_pb2, i_pb3, i_eb1, i_eb2, i_eb3,
+            i_zb1, i_zb2, i_zb3;
+    SpriteRenderer hintbutton;
     GameObject bit1, bit2, bit3, bytes1, bytes2, bytes3, 
             kb1, kb2, kb3, mb1, mb2, mb3, gb1, gb2, gb3, 
             tb1, tb2, tb3, pb1, pb2, pb3, eb1, eb2, eb3,
@@ -37,13 +42,14 @@ public class NewHint : MonoBehaviour
     Box s_zb1 = null;
     Box s_zb2 = null;
     Box s_zb3 = null;
-    public Text hintText;
     List<Box> boxes = new List<Box>();
     /*
      * Called at the start of the scene
      */
     void Start()
     {
+        hintbutton = GameObject.Find("HintBox").GetComponent<SpriteRenderer>();
+       
         if (GameObject.Find("Bit Box 1") != null) {
             bit1 = GameObject.Find("Bit Box 1");
             s_bit1 = bit1.GetComponent<Box>();
@@ -214,7 +220,7 @@ public class NewHint : MonoBehaviour
      */
     void OnMouseDown()
     {
-        if (boxes.Count >= 0)
+        if (boxes.Count > 0)
         {
             foreach (Box b in boxes)
             {
@@ -228,35 +234,127 @@ public class NewHint : MonoBehaviour
             int length = boxes.Count - 1;
             int num = rnd.Next(0, length);
             Box temp = boxes[num];
+            
+        /*
+         * Hint text output that has been randomly 
+         * selected
+         */
 
-            /*
-             * Hint text output that has been randomly 
-             * selected
-             */
-
-            /*
-             * 
-            if (temp.Equals(s_bit1))
+        if (hintbutton.sprite.Equals(i_blank))
             {
-                Text t_bit1 = GameObject.Find("Bit1").GetComponent<Text>();
-                t_bit1.transform.position = new Vector3(-310, -480, 0);
+                if (temp.Equals(s_bit1))
+                {
+                    hintbutton.sprite = i_bit1;
+                }
+                else if (temp.Equals(s_bit2))
+                {
+                    hintbutton.sprite = i_bit2;
+                }
+                else if (temp.Equals(s_bit3))
+                {
+                    hintbutton.sprite = i_bit3;
+                }
+                else if (temp.Equals(s_bytes1))
+                {
+                    hintbutton.sprite = i_bytes1;
+                }
+                else if (temp.Equals(s_bytes2))
+                {
+                    hintbutton.sprite = i_bytes2;
+                }
+                else if (temp.Equals(s_bytes3))
+                {
+                    hintbutton.sprite = i_bytes3;
+                }
+                else if (temp.Equals(s_kb1))
+                {
+                    hintbutton.sprite = i_kb1;
+                }
+                else if (temp.Equals(s_kb2))
+                {
+                    hintbutton.sprite = i_kb2;
+                }
+                else if (temp.Equals(s_kb3))
+                {
+                    hintbutton.sprite = i_kb3;
+                }
+                else if (temp.Equals(s_mb1))
+                {
+                    hintbutton.sprite = i_mb1;
+                }
+                else if (temp.Equals(s_mb2))
+                {
+                    hintbutton.sprite = i_mb2;
+                }
+                else if (temp.Equals(s_mb3))
+                {
+                    hintbutton.sprite = i_mb3;
+                }
+                else if (temp.Equals(s_gb1))
+                {
+                    hintbutton.sprite = i_gb1;
+                }
+                else if (temp.Equals(s_gb2))
+                {
+                    hintbutton.sprite = i_gb2;
+                }
+                else if (temp.Equals(s_gb3))
+                {
+                    hintbutton.sprite = i_gb3;
+                }
+                else if (temp.Equals(s_tb1))
+                {
+                    hintbutton.sprite = i_tb1;
+                }
+                else if (temp.Equals(s_tb2))
+                {
+                    hintbutton.sprite = i_tb2;
+                }
+                else if (temp.Equals(s_tb3))
+                {
+                    hintbutton.sprite = i_tb3;
+                }
+                else if (temp.Equals(s_pb1))
+                {
+                    hintbutton.sprite = i_pb1;
+                }
+                else if (temp.Equals(s_pb2))
+                {
+                    hintbutton.sprite = i_pb2;
+                }
+                else if (temp.Equals(s_pb3))
+                {
+                    hintbutton.sprite = i_pb3;
+                }
+                else if (temp.Equals(s_eb1))
+                {
+                    hintbutton.sprite = i_eb1;
+                }
+                else if (temp.Equals(s_eb2))
+                {
+                    hintbutton.sprite = i_eb2;
+                }
+                else if (temp.Equals(s_eb3))
+                {
+                    hintbutton.sprite = i_eb3;
+                }
+                else if (temp.Equals(s_zb1))
+                {
+                    hintbutton.sprite = i_zb1;
+                }
+                else if (temp.Equals(s_zb2))
+                {
+                    hintbutton.sprite = i_zb2;
+                }
+                else if (temp.Equals(s_zb3))
+                {
+                    hintbutton.sprite = i_zb3;
+                }
             }
-            if (temp.Equals(s_bit2))
+        else
             {
-                Text t_bit2 = GameObject.Find("Bit2").GetComponent<Text>();
-                t_bit2.transform.position = new Vector3(-310, -480, 0);
+                hintbutton.sprite = i_blank;
             }
-            if (temp.Equals(s_bytes1))
-            {
-                Text t_bytes1 = GameObject.Find("Byte1").GetComponent<Text>();
-                t_bytes1.transform.position = new Vector3(-310, -480, 0);
-            }
-            if (temp.Equals(s_bytes2))
-            {
-                Text t_bytes2 = GameObject.Find("Byte2").GetComponent<Text>();
-                t_bytes2.transform.position = new Vector3(-310, -480, 0);
-            }
-            */
         }
     }
 }
