@@ -142,4 +142,9 @@ public class Box : MonoBehaviour
     {
         return finalEndpoint;
     }
+
+    public void setDropped(bool drop)
+    {
+        dropped = drop;
+    } 
 }
