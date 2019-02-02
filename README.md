@@ -10,7 +10,7 @@ See the Issues tab for current Issues.
 
 ## Getting Started
 
-To build and contribute to this project, you will need the latest version of Unity, [availible here](https://unity3d.com/get-unity/download). Once you have Unity, just clone and download this repo and open the project folder in Unity, and you will be ready to build or develop.
+To build and contribute to this project, you will need the latest version of Unity.
 
 ### Prerequisites
 
