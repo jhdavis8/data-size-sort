@@ -7,6 +7,7 @@ This is a short interactive game developed in Unity. It is designed to teach stu
 See the Issues tab for current Issues.
 * The game is not color-blind accessible.
 * The reset button does not work exactly as intended in level 2 with regards to the free answers and box option cycling system.
+* The GUI boxes at level start and end don't work well at high resolutions.
 
 ## Getting Started
 
