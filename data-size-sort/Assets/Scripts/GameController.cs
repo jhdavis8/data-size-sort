@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public Box[] boxes;
+    public Sprite[,] sprites;
+
     public GUISkin skin;
     public GUISkin bigSkin;
     private bool complete;
