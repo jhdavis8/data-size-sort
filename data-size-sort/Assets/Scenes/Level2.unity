@@ -3465,6 +3465,35 @@ MonoBehaviour:
   - {fileID: 259564299}
   - {fileID: 1414625160}
   - {fileID: 343145624}
+  answers:
+  - {fileID: 21300000, guid: d14e965a351427741be51a7396a9bc43, type: 3}
+  - {fileID: 21300000, guid: 5b3b06ae1d4950a4091d779a198bf328, type: 3}
+  - {fileID: 21300000, guid: 883d7a228bc328b48bb5fcde9e4f4d50, type: 3}
+  - {fileID: 21300000, guid: 19ac22f509e0b9149981bd29ef171bde, type: 3}
+  - {fileID: 21300000, guid: a5ee25f2764b2994caa51d8105236788, type: 3}
+  - {fileID: 21300000, guid: e34303dae5a0b9e4ab6266cd07fc0f00, type: 3}
+  - {fileID: 21300000, guid: 434c8f3183a60474184d4726b798f8be, type: 3}
+  - {fileID: 21300000, guid: d5244a3a8f16f6749ab1596e00e13198, type: 3}
+  - {fileID: 21300000, guid: c6cabd99e798c154baabc85f678b9b93, type: 3}
+  - {fileID: 21300000, guid: e7cfacc9194ef414e82f8efdf66e1f8e, type: 3}
+  - {fileID: 21300000, guid: 33cf9df41dfc2534a894e29d53dbf6d7, type: 3}
+  - {fileID: 21300000, guid: 5ea4d1ef9720b294ab3378640cd9be80, type: 3}
+  - {fileID: 21300000, guid: 0cfa47377387dfd4c9681944808568aa, type: 3}
+  - {fileID: 21300000, guid: 86d4a466bc5acda40ae3cda8ec51404d, type: 3}
+  - {fileID: 21300000, guid: 9de4d1ed8df865244973e2ccfe1d2a76, type: 3}
+  - {fileID: 21300000, guid: e5044ad8415c4364bab96d77d6dc4f4e, type: 3}
+  - {fileID: 21300000, guid: 55e24cec12bf71d479b6928015a2cfe2, type: 3}
+  - {fileID: 21300000, guid: cb2056b85eec78d46822dbf35743cabb, type: 3}
+  - {fileID: 21300000, guid: 1d15e45473f6b4f4785682d294c19480, type: 3}
+  - {fileID: 21300000, guid: 902590fd80bffa145b065a1913ae138d, type: 3}
+  - {fileID: 21300000, guid: 57c4da4560e62f649aba56913f8902be, type: 3}
+  - {fileID: 21300000, guid: d5244a3a8f16f6749ab1596e00e13198, type: 3}
+  - {fileID: 21300000, guid: cd9662b41ae85354fb9c2ef90047c2f2, type: 3}
+  - {fileID: 21300000, guid: 2ffae2acc7d9b374f821ea4c616db757, type: 3}
+  - {fileID: 21300000, guid: d49d4dfe27878f648800a95ce2d0c26f, type: 3}
+  - {fileID: 21300000, guid: 79c52d08a65d87644945409c01b1c5d7, type: 3}
+  - {fileID: 21300000, guid: 907c3c23c62081c469161014001414fb, type: 3}
+  mapping: 
   skin: {fileID: 11400000, guid: 47dbd61aac9cf2146a84bb279192a147, type: 2}
   bigSkin: {fileID: 11400000, guid: 24173847311060c49bcfc5ed387ef968, type: 2}
   checkBox: {fileID: 209425993}

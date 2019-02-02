@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public Box[] boxes;
+    public Sprite[] answers;
+    public int[] mapping;
     public GUISkin skin;
     public GUISkin bigSkin;
     private bool complete;
@@ -34,7 +36,8 @@ public class GameController : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Level2")
         {
             ThreeRandomCorrect();
-        }
+            randomBoxes();
+            }
         
     }
 
@@ -203,6 +206,28 @@ public class GameController : MonoBehaviour
     public bool isComplete()
     {
         return complete;
+    }
+
+    //Randomizes the sprites for the answers, does not physically change the boxes, sprites only
+    public void randomBoxes()
+    {
+        int randomNum = 0;
+        int randomNum2 = 0;
+        for (int i = 0; i < 9; i++)
+        {
+            randomNum = Random.Range(0, 2);
+            randomNum2 = ((randomNum + 1) % 3);
+            boxes[i*2 ].GetComponent<SpriteRenderer>().sprite = answers[i*3 + randomNum];
+            boxes[i*2 + 1].GetComponent<SpriteRenderer>().sprite = answers[i*3 + randomNum2];
+
+            Debug.Log("NEW");
+            Debug.Log(i * 2);
+            Debug.Log(i * 2 + 1);
+            Debug.Log(i*3 + randomNum);
+            Debug.Log(i*3 + randomNum2);
+            
+
+        }
     }
 
 }
