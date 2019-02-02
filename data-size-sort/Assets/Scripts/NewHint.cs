@@ -235,7 +235,6 @@ public class NewHint : MonoBehaviour
             int length = boxes.Count - 1;
             int num = rnd.Next(0, length);
             Box temp = boxes[num];
-            Debug.Log(temp);
 
             /*
              * Hint text output that has been randomly 
