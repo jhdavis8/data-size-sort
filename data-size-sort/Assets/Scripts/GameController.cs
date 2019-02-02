@@ -9,13 +9,8 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public Box[] boxes;
-<<<<<<< HEAD
     public Sprite[] answers;
     public int[] mapping;
-=======
-    public Sprite[,] sprites;
-
->>>>>>> 53ec6ba229580aabcddd19d10a003606783499ef
     public GUISkin skin;
     public GUISkin bigSkin;
     private bool complete;
