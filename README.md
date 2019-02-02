@@ -31,11 +31,16 @@ A WebGL build is included in the repository. You can also build **data-size-sort
 
 ## Authors
 
-* **Charlie Hannum** - [channum](https://github.com/channum) Email:[channum@udel.edu]
-* **Joshua Davis** - [jhdavis8](https://github.com/jhdavis8) Email:[jhdavis@udel.edu]
-* **Erin O'Connor** - [erinoconnor17](https://github.com/erinoconnor17) Email:[erino@udel.edu]
-* **Julia Walker** - [julesjoules](https://github.com/julesjoules) Email:[jwalk@udel.edu]
-* **Jake Schichko** - [schichko](https://github.com/schichko) Email:[schichko@udel.edu]
+* **Charlie Hannum** - [channum](https://github.com/channum) 
+ * Email:<channum@udel.edu>
+* **Joshua Davis** - [jhdavis8](https://github.com/jhdavis8) 
+ * Email:<jhdavis@udel.edu>
+* **Erin O'Connor** - [erinoconnor17](https://github.com/erinoconnor17) 
+ * Email:<erino@udel.edu>
+* **Julia Walker** - [julesjoules](https://github.com/julesjoules) 
+ * Email:<jwalk@udel.edu>
+* **Jake Schichko** - [schichko](https://github.com/schichko) 
+ * Email:<schichko@udel.edu>
 
 See also the list of [contributors](https://github.com/jhdavis8/data-size-sort/graphs/contributors) who participated in this project.
 
