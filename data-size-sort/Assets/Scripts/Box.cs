@@ -156,5 +156,10 @@ public class Box : MonoBehaviour
     {
         movable = move;
     }
+
+    public void setCorrectPosition(bool pos)
+    {
+        correctPlace = pos;
+    }
 }
 
