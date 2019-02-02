@@ -47,7 +47,7 @@ public class NewHint : MonoBehaviour
     /*
      * Called at the start of the scene
      */
-    void Start()
+    public void SetupHint()
     {
         hintbutton = GameObject.Find("HintBox").GetComponent<SpriteRenderer>();
 
@@ -68,7 +68,7 @@ public class NewHint : MonoBehaviour
             s_bit3 = bit3.GetComponent<Box>();
             boxes.Add(s_bit3);
         }
-        if (GameObject.Find("Byte Box 3") != null)
+        if (GameObject.Find("Byte Box 1") != null)
         {
             bytes1 = GameObject.Find("Byte Box 1");
             s_bytes1 = bit1.GetComponent<Box>();
@@ -138,7 +138,7 @@ public class NewHint : MonoBehaviour
         if (GameObject.Find("GB Box 3") != null)
         {
             gb3 = GameObject.Find("GB Box 3");
-            s_tb3 = tb3.GetComponent<Box>();
+            s_gb3 = gb3.GetComponent<Box>();
             boxes.Add(s_gb3);
         }
         if (GameObject.Find("TB Box 1") != null)

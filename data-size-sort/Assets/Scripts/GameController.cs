@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
     private Rect buttonUsed;
     public Check checkBox;
     public EndPoint[] endPoints;
+    public NewHint hintBox;
 
     /*
      * Called at initialization, sets up the three random choices given to the player in level 2.
@@ -37,7 +38,8 @@ public class GameController : MonoBehaviour
         {
             ThreeRandomCorrect();
             randomBoxes();
-            }
+            hintBox.SetupHint();
+        }
         
     }
 

@@ -3510,6 +3510,7 @@ MonoBehaviour:
   - {fileID: 1235835333}
   - {fileID: 1718125391}
   - {fileID: 1188653854}
+  hintBox: {fileID: 573979849}
 --- !u!4 &786350069
 Transform:
   m_ObjectHideFlags: 0
