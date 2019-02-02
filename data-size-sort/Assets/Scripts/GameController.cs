@@ -34,11 +34,15 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         somethingHeld = null;
-        if(SceneManager.GetActiveScene().name == "Level2")
+        if (SceneManager.GetActiveScene().name == "Level2")
         {
             ThreeRandomCorrect();
             randomBoxes();
             hintBox.SetupHint();
+        }
+        else
+        {
+            hintBox = null;
         }
         
     }
