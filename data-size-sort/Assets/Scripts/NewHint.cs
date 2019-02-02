@@ -75,7 +75,7 @@ public class NewHint : MonoBehaviour
         if (GameObject.Find("Byte Box 1") != null)
         {
             bytes1 = GameObject.Find("Byte Box 1");
-            s_bytes1 = bit1.GetComponent<Box>();
+            s_bytes1 = bytes1.GetComponent<Box>();
             boxes.Add(s_bytes1);
         }
         if (GameObject.Find("Byte Box 2") != null)
