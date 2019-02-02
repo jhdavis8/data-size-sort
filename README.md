@@ -25,9 +25,13 @@ A WebGL build is included in the repository. You can also build **data-size-sort
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Charlie Hannum** - [channum](https://github.com/channum)
+* **Joshua Davis** - [jhdavis8](https://github.com/jhdavis8)
+* **Erin O'Connor** - [erinoconnor17](https://github.com/erinoconnor17)
+* **Julia Walker** - [julesjoules](https://github.com/julesjoules)
+* **Jake Schichko** - [schichko](https://github.com/schichko)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/jhdavis8/data-size-sort/graphs/contributors) who participated in this project.
 
 ## License
 
@@ -35,6 +39,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+We would like to acknowledge the assistance of:
+* Prof. Katie Wassil, the instructor for CISC 374 who guided this project.
+* James Atlas, Jack Morgan, and Tim Bell from the CS Field Guide, who gave invaluable feedback in the development of this project.
