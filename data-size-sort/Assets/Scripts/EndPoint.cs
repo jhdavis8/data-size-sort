@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * EndPoint: where boxes are dropped by the player
+ * EndPoint: where boxes are dropped by the player. Helps to determine level completion
  */
 public class EndPoint : MonoBehaviour
 {

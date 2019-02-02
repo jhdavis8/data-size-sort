@@ -4,6 +4,9 @@ using System.Collections;
 using System;
 using UnityEngine.UI;
 
+/*
+ * NewHint: Responsible for creating the different hints available to the player in level 2
+ */ 
 public class NewHint : MonoBehaviour
 {
     public Sprite i_blank, i_bit1, i_bit2, i_bit3, i_bytes1, i_bytes2, i_bytes3,
@@ -45,7 +48,8 @@ public class NewHint : MonoBehaviour
     List<Box> boxes = new List<Box>();
 
     /*
-     * Called at the start of the scene
+     * Lets the hint box know which boxes are currently being used in the game
+     * and sets the hints that can appear in game active.
      */
     public void SetupHint()
     {
@@ -216,8 +220,8 @@ public class NewHint : MonoBehaviour
     }
 
     /*
-     * Called whenever the hint button is clicked. It will toggle whether the boxes
-     * show their hints or not
+     * Called whenever the hint button is clicked. It will toggle which box will
+     * show its hints or not
      */
     void OnMouseDown()
     {

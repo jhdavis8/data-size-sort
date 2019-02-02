@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * Box: the actual examples/sizes the player drags around
+ * Box: the actual examples/sizes the player drags around. Only allows for one box to be dragged at once
  */
 public class Box : MonoBehaviour
 {
@@ -152,11 +152,17 @@ public class Box : MonoBehaviour
         dropped = drop;
     } 
 
+    /*
+     * Sets whether the box is able to be moved
+     */ 
     public void setMovable(bool move)
     {
         movable = move;
     }
 
+    /*
+     * Sets whether the box is in the correct place or not
+     */ 
     public void setCorrectPosition(bool pos)
     {
         correctPlace = pos;

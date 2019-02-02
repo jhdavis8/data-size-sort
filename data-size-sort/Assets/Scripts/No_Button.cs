@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * No_Button: Used in the end scene to end and close the game
+ */
 public class No_Button : MonoBehaviour
 {
-    // Exits the game if pressed
+    /*
+     * Exits the game if pressed
+     */ 
     void OnMouseDown()
     {
 

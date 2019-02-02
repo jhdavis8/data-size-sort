@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * Reset_Button: Reloads the scene if the reset button is pressed
+ */ 
 public class Reset_Button : MonoBehaviour
 {
 

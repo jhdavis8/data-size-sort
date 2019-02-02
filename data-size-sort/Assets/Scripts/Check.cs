@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * Check: Controls the level check button to see if it has been pressed
+ */ 
 public class Check : MonoBehaviour
 {
     public GameController gameController;

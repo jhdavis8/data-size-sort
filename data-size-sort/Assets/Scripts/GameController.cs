@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /*
- * GameController: handles whether to progress the scene or not, other global checks
+ * GameController: handles whether to progress the scene or not, check for completion, checking, displaying messages
+ * and initializing levels
  */
 public class GameController : MonoBehaviour
 {
@@ -214,7 +215,9 @@ public class GameController : MonoBehaviour
         return complete;
     }
 
-    //Randomizes the sprites for the answers, does not physically change the boxes, sprites only
+    /*
+     * Randomizes the sprites for the answers. Changes the name of the box accordingly
+     */ 
     public void randomBoxes()
     {
         int randomNum = 0;
