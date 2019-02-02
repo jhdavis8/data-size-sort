@@ -88,27 +88,29 @@ public class Box : MonoBehaviour
      */
     private void OnMouseUp()
     {
-        dropped = true;
-        finalEndpoint = endpoint;
-        if (collided == false || (collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull()))
-        {
-            transform.position = startPos;
-            correctPlace = false;
-        }
-        else
-        {
-            if (collidingTag == this.tag)
+        if (movable) {
+            dropped = true;
+            finalEndpoint = endpoint;
+            if (collided == false || (collidedObject != null && collidedObject.GetComponent<EndPoint>().isFull()))
             {
-                correctPlace = true;
+                transform.position = startPos;
+                correctPlace = false;
             }
             else
             {
-                correctPlace = false;
-            }
+                if (collidingTag == this.tag)
+                {
+                    correctPlace = true;
+                }
+                else
+                {
+                    correctPlace = false;
+                }
 
+            }
+            controller.setHeld(null);
+            this.GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
-        controller.setHeld(null);
-        this.GetComponent<SpriteRenderer>().sortingOrder = 1;
     }
 
 
