@@ -215,17 +215,17 @@ public class GameController : MonoBehaviour
         int randomNum2 = 0;
         for (int i = 0; i < 9; i++)
         {
+            string name = boxes[i * 2].name;
+            name = name.Substring(0, name.Length - 1);
             randomNum = Random.Range(0, 2);
             randomNum2 = ((randomNum + 1) % 3);
             boxes[i*2 ].GetComponent<SpriteRenderer>().sprite = answers[i*3 + randomNum];
             boxes[i*2 + 1].GetComponent<SpriteRenderer>().sprite = answers[i*3 + randomNum2];
 
-            Debug.Log("NEW");
-            Debug.Log(i * 2);
-            Debug.Log(i * 2 + 1);
-            Debug.Log(i*3 + randomNum);
-            Debug.Log(i*3 + randomNum2);
+            boxes[i * 2].name = name + (randomNum+1);
+            boxes[i * 2+1].name = name + (randomNum2+1);
             
+
 
         }
     }
